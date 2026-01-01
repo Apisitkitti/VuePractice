@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import TodoListItem from '@/components/TodoListItem.vue'
+import TaskInput from '@/components/TaskInput.vue'
+import TodoListDataTable from '@/components/TodoListDataTable.vue'
 </script>
 
 <template>
-  <p class="min-h-screen"></p>
+  <div class="w-full">
+    <TaskInput />
+    <TodoListDataTable />
+  </div>
 </template>

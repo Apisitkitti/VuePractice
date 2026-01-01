@@ -1,13 +1,26 @@
 <script setup lang="ts">
-defineProps<{
+import { useTodoListStore } from '@/stores/todoListStore'
+
+const props = defineProps<{
+  id: number
   title: string
 }>()
+
+const removeTodo = useTodoListStore().removeTodo
+
+const handleDeleteTodo = () => {
+  removeTodo(props.id)
+}
+
+console.log(props.id, props.title)
 </script>
 
 <template>
-  <div class="flex gap-2 bg-amber-200">
-    <p>{{ title }}</p>
-    <button class="bg-red-400 rounded-md px-1">Delete</button>
-    <button class="bg-green-200 px-1">Edit</button>
+  <div class="flex gap-2 w-1/4 justify-between bg-gray-400 p-2">
+    <p class="font-bold">{{ props.title }}</p>
+    <div>
+      <button @click="handleDeleteTodo" class="rounded-md px-1 cursor-pointer">Delete</button>
+      <button class="px-1 cursor-pointer">Edit</button>
+    </div>
   </div>
 </template>
