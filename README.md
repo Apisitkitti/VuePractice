@@ -40,3 +40,11 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Link for my deployed todolist practice with vue
+
+```sh
+https://todolist-practice-with-vue.netlify.app/
+```
+
+
