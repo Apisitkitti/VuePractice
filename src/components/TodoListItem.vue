@@ -24,7 +24,7 @@ const handleDeleteTodo = () => {
     </div>
     <div class="flex">
       <IconTrash color="red" @click="handleDeleteTodo" class="rounded-md px-1 cursor-pointer" />
-      <IconEdit color="green" class="px-1 cursor-pointer" />
+      <!-- <IconEdit color="green" class="px-1 cursor-pointer" /> -->
     </div>
   </div>
 </template>
