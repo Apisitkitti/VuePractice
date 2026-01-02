@@ -11,6 +11,6 @@ const todoList = useTodoListStore()
     :key="todo.id"
     class="flex flex-col justify-center items-center p-1"
   >
-    <TodoListItem :id="todo.id" :title="todo.title" />
+    <TodoListItem :id="todo.id" :title="todo.title" :completed="todo.completed" />
   </div>
 </template>

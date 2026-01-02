@@ -4,7 +4,7 @@ import TodoListDataTable from '@/components/TodoListDataTable.vue'
 </script>
 
 <template>
-  <div class="w-full">
+  <div class="w-full my-2">
     <TaskInput />
     <TodoListDataTable />
   </div>
