@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useTodoListStore } from '@/stores/todoListStore'
 import { IconTrash, IconEdit } from '@tabler/icons-vue'
+import { useRouter } from 'vue-router'
 
 const props = defineProps<{
   id: number
@@ -14,6 +15,7 @@ const toggleTodo = useTodoListStore().toggleTodo
 const handleDeleteTodo = () => {
   removeTodo(props.id)
 }
+const router = useRouter()
 </script>
 
 <template>
@@ -24,7 +26,11 @@ const handleDeleteTodo = () => {
     </div>
     <div class="flex">
       <IconTrash color="red" @click="handleDeleteTodo" class="rounded-md px-1 cursor-pointer" />
-      <!-- <IconEdit color="green" class="px-1 cursor-pointer" /> -->
+      <IconEdit
+        @click="router.push({ name: 'edit', params: { id } })"
+        color="green"
+        class="px-1 cursor-pointer"
+      />
     </div>
   </div>
 </template>
